@@ -11,7 +11,7 @@ async function handleConnection(conn) {
             const bytes = await conn.read(buff);
             msg = decoder.decode(buff.subarray(0, bytes)).trim();
             console.log(msg);
-            await conn.write(encoder.encode('RECIEVED'));
+            await conn.write(encoder.encode('RECEIVED'));
         }
     } catch (err) {
         if (err.name === 'BrokenPipe') {

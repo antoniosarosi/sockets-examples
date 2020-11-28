@@ -57,7 +57,7 @@ class HandleConnection implements Runnable {
             while (!msg.equals(Server.END)) {
                 msg = socket.receive();
                 System.out.println(msg);
-                socket.send("RECIEVED");
+                socket.send("RECEIVED");
             }
         } catch (IOException e) {
             e.printStackTrace();
